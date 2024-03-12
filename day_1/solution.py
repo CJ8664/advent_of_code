@@ -1,4 +1,4 @@
-def day_1():
+def part_1():
     result = 0
     with open("input.txt", "r") as fh:
         for line in fh.readlines():
@@ -7,7 +7,7 @@ def day_1():
         print(result)
 
 
-def day_2():
+def part_2():
     result = 0
     num_map = {
         "one": 1,
@@ -36,8 +36,8 @@ def day_2():
 
 
 def main():
-    day_1()
-    day_2()
+    part_1()
+    part_2()
 
 
 if __name__ == "__main__":
