@@ -34,8 +34,7 @@ def check_candidate(row, cols, num):
             for special_char in SPECIAL_CHAR_COORDS[r]:
                 if special_char.row == r and special_char.col == c:
                     special_char.matched_nums.append(int(num))
-                    return True
-    return False
+                    return
 
 
 def common_parsing():
@@ -59,7 +58,7 @@ def common_parsing():
             check_candidate(row, cols, num)
 
 
-def day_1():
+def part_1():
     result = 0
     for _, special_chars in SPECIAL_CHAR_COORDS.items():
         for special_char in special_chars:
@@ -68,7 +67,7 @@ def day_1():
     print(result)
 
 
-def day_2():
+def part_2():
     result = 0
     for _, special_chars in SPECIAL_CHAR_COORDS.items():
         for special_char in special_chars:
@@ -79,8 +78,8 @@ def day_2():
 
 def main():
     common_parsing()
-    day_1()
-    day_2()
+    part_1()
+    part_2()
 
 
 if __name__ == "__main__":
