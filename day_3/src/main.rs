@@ -61,9 +61,7 @@ fn common_parsing(special_char_coords: &mut HashMap<i16, Vec<SpecialChar>>) {
                     special_char_coords.insert(row, Vec::new());
                 }
                 special_char_coords.entry(row).and_modify(|x| {
-                    let special_char = SpecialChar::new(row, col);
-                    println!("{} {}", row, col);
-                    x.push(special_char);
+                    x.push(SpecialChar::new(row, col));
                 });
             }
         }
